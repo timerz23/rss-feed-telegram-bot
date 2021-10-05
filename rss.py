@@ -44,7 +44,7 @@ def create_feed_checker(feed_url):
         if entry.id != db.get_link(feed_url).link:
                        # ↓ Edit this message as your needs.
             if entry.links[1].href!=None:
-                message = f"**{entry.title}**\n{entry.link}\n{entry>links[1].href}\n{entry.published}"
+                message = f"**{entry.title}**\n{entry.link}\n{entry.links[1].href}\n{entry.published}"
             else:
                 message = f"**{entry.title}**\n{entry.link}\n{entry.published}"
             try:
